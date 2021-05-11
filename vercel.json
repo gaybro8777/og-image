@@ -1,5 +1,5 @@
 {
-  "regions": ["sfo1", "lhr1"],
+  "regions": ["sfo1"],
   "functions": {
     "api/**": {
       "memory": 3008
