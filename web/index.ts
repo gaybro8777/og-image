@@ -214,7 +214,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         md = true,
         text = '**Hello** World',
         images=[imageLightOptions[0].value],
-        widths=[],
+        widths=['700px'],
         heights=[],
         showToast = false,
         messageToast = '',
