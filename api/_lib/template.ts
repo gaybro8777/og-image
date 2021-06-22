@@ -49,9 +49,6 @@ function getCss(theme: string, fontSize: string) {
         background-size: 100px 100px;
         height: 100vh;
         display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
     }
 
     code {
@@ -77,10 +74,11 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 75px;
     }
 
-    .plus {
+    .slash {
         color: #BBB;
         font-family: Times New Roman, Verdana;
         font-size: 100px;
+        padding: 0px 30px;
     }
 
     .spacer {
@@ -117,13 +115,13 @@ export function getHtml(parsedReq: ParsedRequest) {
         <div>
             <div class="spacer">
             <div class="logo-wrapper">
-                ${images.map((img, i) =>
-                    getPlusSign(i) + getImage(img, widths[i], heights[i])
-                ).join('')}
+                ${getLogo(images[0], widths[0], heights[0])}
+                <div class="slash">/</div>
+                ${getAvatar(images[1], widths[1], heights[1])}
             </div>
             <div class="spacer">
             <div class="heading">${emojify(
-                md ? marked(text) : sanitizeHtml(text)
+              md ? marked(text) : sanitizeHtml(text)
             )}
             </div>
         </div>
@@ -131,16 +129,24 @@ export function getHtml(parsedReq: ParsedRequest) {
 </html>`;
 }
 
-function getImage(src: string, width ='auto', height = '225') {
-    return `<img
+function getAvatar(src: string, width = "auto", height = "320") {
+  return `<img
         class="logo"
-        alt="Generated Image"
+        alt="Avatar"
+        style="border-radius: 100%"
         src="${sanitizeHtml(src)}"
         width="${sanitizeHtml(width)}"
         height="${sanitizeHtml(height)}"
-    />`
+    />`;
 }
 
-function getPlusSign(i: number) {
-    return i === 0 ? '' : '<div class="plus">+</div>';
+
+function getLogo(src: string, width ='auto', height = '130') {
+    return `<img
+        class="logo"
+        alt="Logo"
+        src="${sanitizeHtml(src)}"
+        width="${sanitizeHtml(width)}"
+        height="${sanitizeHtml(height)}"
+    />`;
 }
