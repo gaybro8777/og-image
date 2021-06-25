@@ -130,7 +130,7 @@ export function getHtml(parsedReq: ParsedRequest) {
 </html>`;
 }
 
-function getAvatar(src: string, width = "auto", height = "320") {
+function getAvatar(src: string, width = "320", height = "320") {
   return `<img
         class="logo"
         alt="Avatar"
