@@ -53,8 +53,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 function getDefaultImages(images: string[], theme: Theme): string[] {
     const defaultImage =
       theme === "light"
-        ? "https://calendso.com/calendso-logo.svg"
-        : "https://calendso.com/calendso-logo-white.svg";
+        ? "https://cal.com/logo.svg"
+        : "https://cal.com/logo-white.svg";
 
     if (!images || !images[0]) {
         return [defaultImage];

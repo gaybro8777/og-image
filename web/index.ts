@@ -142,13 +142,13 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-    { text: 'Vercel', value: 'https://calendso.com/calendso-logo-white.svg' },
+    { text: 'Vercel', value: 'https://cal.com/logo-white.svg' },
     { text: 'Next.js', value: 'https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg' },
     { text: 'Hyper', value: 'https://assets.vercel.com/image/upload/front/assets/design/hyper-color-logo.svg' },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-  { text: "Vercel", value: "https://calendso.com/calendso-logo.svg" },
+  { text: "Vercel", value: "https://cal.com/logo.svg" },
   {
     text: "Next.js",
     value:
